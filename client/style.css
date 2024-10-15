@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: hsl(0, 0%, 3%);
     color: white;
     padding: 1rem;
     display: flex;
@@ -42,22 +42,67 @@ button:hover {
 }
 
 h1  {
-    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center; 
 }
 
 
 .horizontal-list {
     list-style-type: none; 
     padding: 0;           
-    margin: 0;            
+    margin: 5;            
     display: flex;        /
 }
 
 .horizontal-list li {
-    margin-right: 20px;   
+    margin-right: 180px;   
 }
 
 
 .horizontal-list li:last-child {
     margin-right: 0;
 }
+
+.logo {
+    width: 100px; 
+}
+
+.footer {
+    background-color: #333; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+
+.footer-content {
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px; 
+
+.footer-links, .footer-info, .footer-social {
+    flex: 1; 
+    margin: 10px; 
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+.footer-links a, .footer-social a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    text-decoration: underline; /
+
+.footer-bottom {
+    background-color: #222; */
+    padding: 10px 0; 

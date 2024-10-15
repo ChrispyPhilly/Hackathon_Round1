@@ -16,25 +16,32 @@ const main = async () => {
         {
           type:'Bedframes' ,
           description: 'Durable and stylish bedframes designed to support your mattress and enhance your bedroom’s aesthetic. Choose from a wide range of sizes and styles, from minimalist metal frames to elegant wooden designs, combining comfort and stability.',
+
       })
       type2.save()
 
       const type3 = await new Type(
         {
           type: 'Chairs' ,
+
           description: 'Ergonomically designed chairs for your dining room, office, or outdoor setting. Available in various styles, from classic wooden chairs to sleek, modern designs, offering comfortable seating for any occasion.',
+
       })
       type3.save()
 
       const type4 = await new Type(
         {
           type:'Lights' ,
+
           description: "Illuminate your space with our collection of modern and elegant lights. From chandeliers to floor lamps, find the perfect lighting solution to enhance your home's atmosphere while adding a touch of sophistication.",
+
+
       })
       type4.save()
 
       const type5 = await new Type(
         {
+
           type: 'Dressers',
           description: 'Spacious and stylish dressers, perfect for organizing clothes, accessories, and more. Crafted from premium materials, these dressers blend functionality and design, providing ample storage space while enhancing any bedroom décor.',
       })
