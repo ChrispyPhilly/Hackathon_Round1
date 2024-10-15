@@ -1,5 +1,5 @@
 const db = require('../db')
-const {Type , Item} = require('../models/plant')
+const {Type , Item} = require('../models')
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))

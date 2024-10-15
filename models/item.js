@@ -9,7 +9,7 @@ const Item = new Schema(
         priceUSD: {type: Number, required: true},
         dimensions: {
             height: {type: String, required: true},
-            width:{type: String, required: true},
+            width:{type: String},
             length: {type: String},
             depth: {type: String},
             seatHeight: {type: String},
