@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General Assembly Furniture Mart</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
@@ -29,7 +30,12 @@
     </nav>
     
     <main>
-        
+        <div class="search-bar">
+            <input id="textInput" type="text" placeholder="Enter Furniture Type">
+            <button id="searchButton">Search</button>
+        </div>
+       
+        <div class="item-container"></div>
         <div class="product-container">
             <div class="product" data-name="Product 1" data-price="10">
                 <img src="Table.jpg" alt="Sofa">
@@ -104,7 +110,5 @@
             <p>&copy; 2024 Chris/Cohen/Leah/Morgan. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

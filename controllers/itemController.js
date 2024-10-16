@@ -63,20 +63,6 @@ const deleteItem = async (req, res) => {
     }
 }
 
-const searchItemByName = async (req,res) => {
-    try {
-    const {name} = req.query
-    const query = {}
-
-    if (name) {
-        query.name = new RegExp(name, `i`)
-    }
-
-    const item = await Item.find(query).populate(`type`)
-    return res.json(item)
-} catch (error) {
-    res.status(500).json({error: 'Error searching item'})
-}}
 
 
 module.exports = {
@@ -85,5 +71,4 @@ module.exports = {
     createItem,
     updateItem,
     deleteItem,
-    searchItemByName
 }
