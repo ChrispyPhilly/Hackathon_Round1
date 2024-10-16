@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('Store.jpg');
 }
 
 header {
@@ -63,6 +64,9 @@ h1  {
     align-items: center;
 }
 
+h2, p  {
+    color: whitesmoke;
+}
 .container {
     text-align: center; 
 }
@@ -124,3 +128,37 @@ h1  {
     padding: 10px; 
 }
 
+@media (max-width: 768px) {
+    #products {
+        justify-content: center; 
+    }
+
+    .product {
+        width: 150px; 
+    }
+
+    nav ul li {
+        margin: 0 10px; 
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2em; 
+
+    #products {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .product {
+        width: 90%; 
+        margin: 10px 0; 
+    }
+
+    .social-media img {
+        width: 25px; 
+        height: 25px; 
+    }
+}
