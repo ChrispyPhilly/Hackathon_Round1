@@ -13,6 +13,15 @@ header {
     align-items: center;
 }
 
+
+.styled-link {
+    color: #070707; 
+    text-decoration: none; 
+    position: relative; 
+    transition: color 0.3s ease; 
+    text-transform: capitalize;
+}
+
 .product-container {
     display: flex;
     justify-content: space-around;
@@ -29,6 +38,12 @@ header {
     width: 200px;
 }
 
+.product img {
+    max-width: 100%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
 button {
     background-color: #4CAF50;
     color: white;
@@ -76,8 +91,9 @@ h1  {
 .footer {
     background-color: #333; 
     color: white; 
-    padding: 20px; 
+    padding: 0px; 
     text-align: center; 
+    width: 100%;
 
 .footer-content {
     display: flex; 
@@ -105,4 +121,6 @@ h1  {
 
 .footer-bottom {
     background-color: #222; */
-    padding: 10px 0; 
+    padding: 10px; 
+}
+
