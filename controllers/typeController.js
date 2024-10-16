@@ -64,13 +64,18 @@ const deleteType = async (req, res) => {
 }
 
 const searchTypeByName = async (req,res) => {
-    try {
-    const name = req.query.name
-    const types = await Type.Find({type: new RegExp(name, 'i')})
-    res.json(types)
-} catch (error) {
-    res.status(500).json({error: 'Error searching types'})
-}}
+        try {
+            const { type } = req.query
+            const query = {}
+            if (type) {
+                query.type = new RegExp(type, 'i')
+            }
+            const types = await Type.find(query);
+            return res.json(types)
+        } catch (error) {
+            return res.status(500).send(error.message)
+        }
+    } 
 
 
 
