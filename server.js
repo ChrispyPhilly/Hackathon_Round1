@@ -9,9 +9,8 @@ const logger = require('morgan')
 // require() imports and middleware here ^ ///////
 
 const PORT = process.env.PORT || 3001;
-
-app.use(cors())
 const app = express();
+app.use(cors())
 app.use(logger('dev'))
 app.use(bodyParser.json())
 // app.use() middleware here ^ ///////////////////
