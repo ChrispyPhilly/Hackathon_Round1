@@ -85,5 +85,5 @@ module.exports = {
     createItem,
     updateItem,
     deleteItem,
-    searchItemByName
+    searchItemByType
 }

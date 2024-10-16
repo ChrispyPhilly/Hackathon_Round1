@@ -19,8 +19,8 @@ app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
 
 app.get('/items', itemController.getAllItems)
 app.get('/items/:id', itemController.getItemById)
-app.get('/items/', itemController.searchItemByName)
-app.get('/items',itemController.createItem)
+app.get('/items/search', itemController.searchItemByType)
+app.get('/items/create',itemController.createItem)
 app.put('/items/:id', itemController.updateItem)
 app.delete('/items/:id', itemController.deleteItem)
 
