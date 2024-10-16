@@ -5,16 +5,17 @@ const {Type , Item} = require('../models')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
+
     const type1 = await new Type(
       {
-        type:'Tables' ,
+        type:'tables' ,
         description: 'A versatile collection of tables, perfect for dining, working, or displaying décor. Crafted from high-quality materials to suit any home style, from modern to traditional. Available in various sizes and finishes to complement your space effortlessly.',
     })
     type1.save()
 
     const type2 = await new Type(
         {
-          type:'Bedframes' ,
+          type:'bedframes' ,
           description: 'Durable and stylish bedframes designed to support your mattress and enhance your bedroom’s aesthetic. Choose from a wide range of sizes and styles, from minimalist metal frames to elegant wooden designs, combining comfort and stability.',
 
       })
@@ -22,7 +23,7 @@ const main = async () => {
 
       const type3 = await new Type(
         {
-          type: 'Chairs' ,
+          type: 'chairs' ,
 
           description: 'Ergonomically designed chairs for your dining room, office, or outdoor setting. Available in various styles, from classic wooden chairs to sleek, modern designs, offering comfortable seating for any occasion.',
 
@@ -31,7 +32,7 @@ const main = async () => {
 
       const type4 = await new Type(
         {
-          type:'Lights' ,
+          type:'lights' ,
 
           description: "Illuminate your space with our collection of modern and elegant lights. From chandeliers to floor lamps, find the perfect lighting solution to enhance your home's atmosphere while adding a touch of sophistication.",
 
@@ -42,14 +43,14 @@ const main = async () => {
       const type5 = await new Type(
         {
 
-          type: 'Dressers',
+          type: 'dressers',
           description: 'Spacious and stylish dressers, perfect for organizing clothes, accessories, and more. Crafted from premium materials, these dressers blend functionality and design, providing ample storage space while enhancing any bedroom décor.',
       })
       type5.save()
 
       const items = [
         {
-            name: 'Oak Dining Table',
+            name: 'oak dining table',
             type: type1._id, 
             image: 'images/oak dining table.webp',
             priceUSD: 399,
@@ -64,7 +65,7 @@ const main = async () => {
         },
 
         {
-            name: 'Glass Coffee Table',
+            name: 'glass coffee table',
             type: type1._id, 
             image: 'images/glass coffee table.webp',
             priceUSD: 199,
@@ -78,7 +79,7 @@ const main = async () => {
             stock: 20
         },
         {
-            name: 'Rustic Farmhouse Table',
+            name: 'rustic farmhouse table',
             type: type1._id, 
             image: 'images/farmhouse table.jpg',
             priceUSD: 549,
@@ -92,7 +93,7 @@ const main = async () => {
             stock: 0
         },
         {
-            name: 'Modern Round Dining Table',
+            name: 'modern round dining table',
             type: type1._id, 
             image: 'images/round dining table.jpg',
             priceUSD: 299,
@@ -106,7 +107,7 @@ const main = async () => {
         },
 
         {
-            name: 'Compact Folding Table',
+            name: 'compact folding table',
             type: type1._id, 
             image: 'images/folding table.jpg',
             priceUSD: 99,
@@ -121,7 +122,7 @@ const main = async () => {
         },
 
         {
-            name: 'Queen Platform Bed',
+            name: 'queen platform bed',
             type: type2._id, 
             image: 'images/queen wood bed.webp',
             priceUSD: 599,
@@ -137,7 +138,7 @@ const main = async () => {
         },
 
         {
-            name: 'King Upholster Bed',
+            name: 'king upholster bed',
             type: type2._id, 
             image: 'images/king upholstered.jpg',
             priceUSD: 799,
@@ -153,7 +154,7 @@ const main = async () => {
         },
 
         {
-            name: 'Twin Metal Bed Frame',
+            name: 'twin metal bedframe',
             type: type2._id, 
             image: 'images/twin bed.jpg',
             priceUSD: 249,
@@ -169,7 +170,7 @@ const main = async () => {
         },
 
         {
-            name: 'Full Storage Bed',
+            name: 'full storage bed',
             type: type2._id, 
             image: 'images/full bed.jpg',
             priceUSD: 699,
@@ -185,7 +186,7 @@ const main = async () => {
         },
 
         {
-            name: 'Sleigh Bed',
+            name: 'sleigh bed',
             type: type2._id, 
             image: 'images/sleigh bed.jpg',
             priceUSD: 899,
@@ -201,7 +202,7 @@ const main = async () => {
         },
 
         {
-            name: 'Leather Office Chair',
+            name: 'leather office chair',
             type: type3._id, 
             image: 'images/leather chair.jpg',
             priceUSD: 229,
@@ -217,7 +218,7 @@ const main = async () => {
         },
 
         {
-            name: 'Modern Dining Chair',
+            name: 'modern dining chair',
             type: type3._id, 
             image: 'images/dining chair.webp',
             priceUSD: 149,
@@ -233,7 +234,7 @@ const main = async () => {
         },
 
         {
-            name: 'Outdoor Patio Chair',
+            name: 'outdoor patio chair',
             type: type3._id, 
             image: 'images/patio chair.jpg',
             priceUSD: 89,
@@ -249,7 +250,7 @@ const main = async () => {
         },
 
         {
-            name: 'Vintage Wooden Rocking Chair',
+            name: 'vintage wooden rocking chair',
             type: type3._id,
             image: 'images/rocking chair.jpg',
             priceUSD: 299,
@@ -264,7 +265,7 @@ const main = async () => {
             stock: 0
         },
         {
-            name: 'Ergonomic Mesh Chair',
+            name: 'ergonomic mesh chair',
             type: type3._id,
             image: 'images/mesh chair.jpg',
             priceUSD: 199,
@@ -281,7 +282,7 @@ const main = async () => {
 
         // Lights
         {
-            name: 'Industrial Pendant Light',
+            name: 'industrial pendant light',
             type: type4._id,
             image: 'images/pendant light.jpg',
             priceUSD: 149,
@@ -294,7 +295,7 @@ const main = async () => {
             stock: 35
         },
         {
-            name: 'Modern Floor Lamp',
+            name: 'modern floor lamp',
             type: type4._id,
             image: 'images/floor lamp.jpg',
             priceUSD: 199,
@@ -306,7 +307,7 @@ const main = async () => {
             stock: 20
         },
         {
-            name: 'Crystal Chandelier',
+            name: 'crystal chandelier',
             type: type4._id,
             image: 'images/chandelier.jpg',
             priceUSD: 599,
@@ -319,7 +320,7 @@ const main = async () => {
             stock: 0
         },
         {
-            name: 'LED Desk Lamp',
+            name: 'led desk lamp',
             type: type4._id,
             image: 'images/led lamp.webp',
             priceUSD: 49,
@@ -331,7 +332,7 @@ const main = async () => {
             stock: 100
         },
         {
-            name: 'Wall Sconce Light',
+            name: 'wall sconce light',
             type: type4._id,
             image: 'images/wall light.jpg',
             priceUSD: 99,
@@ -346,7 +347,7 @@ const main = async () => {
 
         // Dressers
         {
-            name: '6-Drawer Wooden Dresser',
+            name: '6-drawer wooden dresser',
             type: type5._id,
             image: 'images/wooden dresser.jpg',
             priceUSD: 599,
@@ -360,7 +361,7 @@ const main = async () => {
             stock: 10
         },
         {
-            name: '3-Drawer Modern Dresser',
+            name: '3-drawer modern dresser',
             type: type5._id,
             image: 'images/3 drawer dresser.avif',
             priceUSD: 299,
@@ -374,7 +375,7 @@ const main = async () => {
             stock: 15
         },
         {
-            name: 'Vintage Oak Dresser',
+            name: 'vintage oak dresser',
             type: type5._id,
             image: 'images/vintage dresser.webp',
             priceUSD: 699,
@@ -388,7 +389,7 @@ const main = async () => {
             stock: 5
         },
         {
-            name: 'Highboy 5-Drawer Dresser',
+            name: 'highboy 5-drawer dresser',
             type: type5._id,
             image: 'images/highboy.jpg',
             priceUSD: 499,
@@ -402,7 +403,7 @@ const main = async () => {
             stock: 8
         },
         {
-            name: 'Scandinavian 4-Drawer Dresser',
+            name: 'scandinavian 4-drawer dresser',
             type: type5._id,
             image: 'images/4 drawer.webp',
             priceUSD: 549,
