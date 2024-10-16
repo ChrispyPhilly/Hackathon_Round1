@@ -73,7 +73,7 @@ const searchItemByName = async (req,res) => {
     }
 
     const item = await Item.find(query).populate(`type`)
-    return res.json(name)
+    return res.json(item)
 } catch (error) {
     res.status(500).json({error: 'Error searching item'})
 }}
