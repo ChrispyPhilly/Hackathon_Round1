@@ -22,14 +22,14 @@ app.get('/', (req,res) => res.send('Welcome to General Assembly Mart!'))
 
 app.get('/items', itemController.getAllItems)
 app.get('/items/:id', itemController.getItemById)
-app.get('/items',itemController.createItem)
+app.post('/items',itemController.createItem)
 app.put('/items/:id', itemController.updateItem)
 app.delete('/items/:id', itemController.deleteItem)
 
 
 app.get('/types', typeController.getAllTypes)
 app.get('/types/search', typeController.searchTypeByName)
-app.get('/types/create',typeController.createType)
+app.post('/types/create',typeController.createType)
 app.get('/types/:id', typeController.getTypeById)
 app.put('/types/:id', typeController.updateType)
 app.delete('/types/:id', typeController.deleteType)
