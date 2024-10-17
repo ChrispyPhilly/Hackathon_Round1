@@ -16,7 +16,7 @@ header {
 
 
 .styled-link {
-    color: #d7d4d4; 
+    color: #bdbdbd; 
     text-decoration: none; 
     position: relative; 
     transition: color 0.3s ease; 
@@ -82,6 +82,7 @@ h2, p  {
 
 .horizontal-list {
     list-style-type: none; 
+    color: white;
     padding: 0;           
     margin: 5;            
     display: flex;        /
