@@ -17,10 +17,13 @@ app.use(bodyParser.json())
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
 
+
+app.get('/', (req,res) => res.send('welcome to General Assembly Mart!'))
+
 app.get('/items', itemController.getAllItems)
 app.get('/items/:id', itemController.getItemById)
-app.get('/items/search', itemController.searchItemByType)
-app.get('/items/create',itemController.createItem)
+app.get('/items/', itemController.searchItemByName)
+app.get('/items',itemController.createItem)
 app.put('/items/:id', itemController.updateItem)
 app.delete('/items/:id', itemController.deleteItem)
 
