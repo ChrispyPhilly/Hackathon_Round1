@@ -50,6 +50,7 @@ const getTypes = async (type) => {
 
 
 
+
 search.addEventListener('click', () => {
     getTypes(input.value);
 })
@@ -62,4 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
             getBrand(brandName)
         })
     })
+
+
+search.keyup(function(event) {
+    if (event.keyCode == 13) {
+        search.click()
+    }
+
 })
