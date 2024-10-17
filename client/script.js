@@ -1,7 +1,8 @@
 const search = document.querySelector('#searchButton')
 const input = document.querySelector('#textInput')
 const itemContainer = document.querySelector('.item-container')
-const BASE_URL = 'http://localhost:3001/'
+const productContainer = document.querySelector('.product-container')
+const ITEMS_URL = 'http://localhost:3001/items'
 const TYPES_URL = 'http://localhost:3001/types'
 
 let cartCount = 0;
@@ -33,7 +34,6 @@ const getTypes = async (type) => {
                 typeDiv.innerHTML = `
                     <h3>${typesData[i].type}</h3>
                     <p>${typesData[i].description}</p>
-                    <button class="add-to-cart">Add to Cart</button>
                 `;
 
                 itemContainer.appendChild(typeDiv);
@@ -45,17 +45,48 @@ const getTypes = async (type) => {
         console.error("Error:", error);
     }
 };
+const getItems = async () => {
+    try {
+        let response = await axios.get(`${ITEMS_URL}`);
+        if (response) {
+            let itemsData = await response.data;
 
+            productContainer.innerHTML = '';
+
+            if (itemsData.length === 0) {
+                productContainer.innerHTML = '<p>No items found. Please try again later.</p>';
+                return;
+            } else {
+                for (let i = 0; i < itemsData.length; i++) {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('item');
+                    itemDiv.innerHTML = `
+                        <h3>${itemsData[i].name}</h3>
+                        <p>Price: $${itemsData[i].priceUSD}</p>
+                        <p>Material: ${itemsData[i].material}</p>
+                        <p>Stock: ${itemsData[i].stock}</p>
+                        <button class="add-to-cart" data-name="${itemsData[i].name}">Add to Cart</button>
+                    `;
+
+                    productContainer.appendChild(itemDiv);
+                }
+            }
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+};
 
 
 
 
 
 // search.addEventListener('click', () => {
-//     getTypes(input.value);
+//     getItems(input.value);
 // })
 
 document.addEventListener("DOMContentLoaded", () => {
+    getItems()
     const typeButton = document.querySelectorAll('.horizontal-list')
     typeButton.forEach(button => {
         button.addEventListener('click', (event) => {
