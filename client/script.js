@@ -28,6 +28,12 @@ const getTypes = async (type) => {
 
 
 
-search.addEventListener('click', () => {
-    getTypes(input.value);
+// search.addEventListener('click', () => {
+//     getTypes(input.value);
+// })
+
+search.keyup(function(event) {
+    if (event.keyCode == 13) {
+        search.click()
+    }
 })
