@@ -1,6 +1,5 @@
 const search = document.querySelector('#searchButton')
 const input = document.querySelector('#textInput')
-productName = document.querySelector('.product')
 const BASE_URL = 'http://localhost:3001/'
 const TYPES_URL = 'http://localhost:3001/types'
 
@@ -16,9 +15,9 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 
 const getTypes = async (type) => {
     try {
-        let response = await fetch(`${TYPES_URL}/search?type=${type}`)
+        let response = await axios.get(`${TYPES_URL}/search?type=${type}`)
         if (response) {
-            let typesData = await response.json()
+            let typesData = await response.data
             console.log(typesData)
         } 
     } catch (error) {
