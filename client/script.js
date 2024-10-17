@@ -51,22 +51,22 @@ const getTypes = async (type) => {
 
 
 
-search.addEventListener('click', () => {
-    getTypes(input.value);
-})
+// search.addEventListener('click', () => {
+//     getTypes(input.value);
+// })
 
 document.addEventListener("DOMContentLoaded", () => {
     const typeButton = document.querySelectorAll('.horizontal-list')
     typeButton.forEach(button => {
         button.addEventListener('click', (event) => {
-            const bran = event.target.textContent.toLowerCase()
-            getBrand(brandName)
+            const types = event.target.textContent.toLowerCase()
+            getTypes(types)
         })
     })
 })
 
-search.keyup(function(event) {
-    if (event.keyCode == 13) {
-        search.click()
-    }
-})
+// search.keyup(function(event) {
+//     if (event.keyCode == 13) {
+//         search.click()
+//     }
+// })
