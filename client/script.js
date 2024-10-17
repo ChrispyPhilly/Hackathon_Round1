@@ -63,11 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
             getBrand(brandName)
         })
     })
-
+})
 
 search.keyup(function(event) {
     if (event.keyCode == 13) {
         search.click()
     }
-
 })
